@@ -1,0 +1,46 @@
+{
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/api/catalog/homepage",
+            "UpstreamHttpMethod": [ "Get" ],
+
+            "DownstreamPathTemplate": "/api/v1/catalog/homepage",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7168
+                }
+            ]
+        },
+        {
+            "UpstreamPathTemplate": "/api/catalog/product/{productId}",
+            "UpstreamHttpMethod": [ "Get" ],
+
+            "DownstreamPathTemplate": "/api/v1/catalog/product/{productId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7168
+                }
+            ]
+        },
+        {
+            "UpstreamPathTemplate": "/api/basket/user/{userId}",
+            "UpstreamHttpMethod": [ "Get" ],
+
+            "DownstreamPathTemplate": "/api/v1/basket/user/{userId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7143
+                }
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:7225"
+    }
+}
